@@ -1,0 +1,94 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* Set Fonts and Resets */
+body,
+html {
+  background: black;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+/* With Flexbox, Horizontally and vertically cneter */
+body {
+  display: -webkit-box;
+  display: flex;
+  flex-flow: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+/* Title */
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color: #E6E6E6;
+  display: block;
+  font-size: 3.5rem;
+}
+
+/* Actual Keyboard Keys */
+kbd {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  display: block;
+  font-size: 4rem;
+  color: #E6E6E6;
+}
+
+/* Name of Sound */
+.sound {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: #e2e2e2;
+}
+
+/* Use CSS Grid to display keys */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+/* Visual Keys / Squares */
+.key {
+  /* Typography */
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+
+  /* Styling of keys */
+  width: 10rem;
+  text-align: center;
+  outline: 1px solid #E6E6E6;
+  border-radius: 15px;
+  
+  /* Change mouse pointer */
+  cursor:pointer;
+  -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  
+  /* Call Transition */
+  transition: all 0.07s ease;
+}
+
+
+/* Transition Animation. Last frame of animation. */
+.playing {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  background: white;
+}
